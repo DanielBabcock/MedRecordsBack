@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient: one
+  medication_name: MyString
+  current_use: false
+  mediation_purpose: MyString
+  medication_dose_amount: MyString
+  medication_dose_frequency: MyString
+  medication_start_date: 2017-12-11 11:00:52
+  medication_end_date: 2017-12-11 11:00:52
+  care_giver: MyString
+  care_giver_title: MyString
+
+two:
+  patient: two
+  medication_name: MyString
+  current_use: false
+  mediation_purpose: MyString
+  medication_dose_amount: MyString
+  medication_dose_frequency: MyString
+  medication_start_date: 2017-12-11 11:00:52
+  medication_end_date: 2017-12-11 11:00:52
+  care_giver: MyString
+  care_giver_title: MyString
