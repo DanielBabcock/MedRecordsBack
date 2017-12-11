@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient: one
+  family_member_relation: MyString
+  prion_disease: false
+  cardiac_disease: false
+  cardiac_event: false
+  cardiac_event_ages: MyString
+  cardiac_death: false
+  cardiac_: MyString
+  death_age: MyString
+  diabetes: false
+  diabetes_type: MyString
+  organ_diseases: false
+  organ_disease_name: MyString
+  respiratory_disease: false
+  respiratory_disease_names: MyString
+  cancer: false
+  cancer_death: false
+  cancer_types: MyString
+  cancer_event_age: 1
+  high_blood_pressure: false
+  stroke: false
+  alzheimers_or_dementia: false
+  osteoporosis: false
+  bleeding_disorder: false
+
+two:
+  patient: two
+  family_member_relation: MyString
+  prion_disease: false
+  cardiac_disease: false
+  cardiac_event: false
+  cardiac_event_ages: MyString
+  cardiac_death: false
+  cardiac_: MyString
+  death_age: MyString
+  diabetes: false
+  diabetes_type: MyString
+  organ_diseases: false
+  organ_disease_name: MyString
+  respiratory_disease: false
+  respiratory_disease_names: MyString
+  cancer: false
+  cancer_death: false
+  cancer_types: MyString
+  cancer_event_age: 1
+  high_blood_pressure: false
+  stroke: false
+  alzheimers_or_dementia: false
+  osteoporosis: false
+  bleeding_disorder: false

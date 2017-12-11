@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_first: MyString
+  name_last: MyString
+  patient_sex: MyString
+  race: MyString
+  height: MyString
+  height_in_inches: false
+  weight: 1
+  weight_in_pounds: false
+  date_birth: 2017-12-11
+  address: MyString
+  phone_number: 1
+  emergency_contact_name_first: MyString
+  emergency_contact_name_last: MyString
+  emergency_contact_phone_number: MyString
+  emergency_contact_address: MyString
+  eligible_blood_donor: false
+
+two:
+  name_first: MyString
+  name_last: MyString
+  patient_sex: MyString
+  race: MyString
+  height: MyString
+  height_in_inches: false
+  weight: 1
+  weight_in_pounds: false
+  date_birth: 2017-12-11
+  address: MyString
+  phone_number: 1
+  emergency_contact_name_first: MyString
+  emergency_contact_name_last: MyString
+  emergency_contact_phone_number: MyString
+  emergency_contact_address: MyString
+  eligible_blood_donor: false
