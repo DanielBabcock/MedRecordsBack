@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :patient_infos
   resources :items
   post 'authenticate', to: 'authentication#authenticate'
+  # get 'url' to: 'controllerName#methodName'
+  #make new controller with generate
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
