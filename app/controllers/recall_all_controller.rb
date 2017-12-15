@@ -9,11 +9,7 @@ class RecallAllController < ApplicationController
     @patient_infos = PatientInfo.all
     @surgical_procedures = SurgicalProcedure.all
     @vaccinations = Vaccination.all
-
-
-
-    
-    
+        # renders
     render json: @family_histories, @major_illnesses, @medications, @patient_infos, @surgical_procedures, @vaccinations 
 
   end
@@ -22,31 +18,5 @@ class RecallAllController < ApplicationController
   def show
     render json: @family_history, @major_illnesses, @medications, @patient_infos, @surgical_procedures, @vaccinations 
   end
-
-#   # POST /all
-#   def create
-#     @family_history = FamilyHistory.new(family_history_params)
-
-#     if @family_history.save
-#       render json: @family_history, status: :created, location: @family_history
-#     else
-#       render json: @family_history.errors, status: :unprocessable_entity
-#     end
-#   end
-
-#   # PATCH/PUT /all
-#   def update
-#     if @family_history.update(family_history_params)
-#       render json: @family_history
-#     else
-#       render json: @family_history.errors, status: :unprocessable_entity
-#     end
-#   end
-
-#   # DELETE /all
-#   def destroy
-#     @family_history.destroy
-#   end
-
     
 end
