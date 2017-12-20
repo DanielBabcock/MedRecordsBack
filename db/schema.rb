@@ -13,15 +13,14 @@
 ActiveRecord::Schema.define(version: 20171211170125) do
 
   create_table "family_histories", force: :cascade do |t|
-    t.integer "patient_id"
+    t.integer "user_id"
     t.string "family_member_relation"
     t.boolean "prion_disease"
     t.boolean "cardiac_disease"
     t.boolean "cardiac_event"
     t.string "cardiac_event_ages"
     t.boolean "cardiac_death"
-    t.string "cardiac_"
-    t.string "death_age"
+    t.string "cardiac_death_age"
     t.boolean "diabetes"
     t.string "diabetes_type"
     t.boolean "organ_diseases"
@@ -39,7 +38,7 @@ ActiveRecord::Schema.define(version: 20171211170125) do
     t.boolean "bleeding_disorder"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["patient_id"], name: "index_family_histories_on_patient_id"
+    t.index ["user_id"], name: "index_family_histories_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|

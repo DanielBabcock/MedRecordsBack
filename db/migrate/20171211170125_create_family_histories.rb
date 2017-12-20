@@ -1,15 +1,14 @@
 class CreateFamilyHistories < ActiveRecord::Migration[5.1]
   def change
     create_table :family_histories do |t|
-      t.references :patient, foreign_key: true
+      t.references :user, foreign_key: true
       t.string :family_member_relation
       t.boolean :prion_disease
       t.boolean :cardiac_disease
       t.boolean :cardiac_event
       t.string :cardiac_event_ages
       t.boolean :cardiac_death
-      t.string :cardiac_
-      t.string :death_age
+      t.string :cardiac_death_age
       t.boolean :diabetes
       t.string :diabetes_type
       t.boolean :organ_diseases
