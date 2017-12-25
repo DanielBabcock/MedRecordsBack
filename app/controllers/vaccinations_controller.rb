@@ -1,5 +1,6 @@
 class VaccinationsController < ApplicationController
   before_action :set_vaccination, only: [:show, :update, :destroy]
+  #, :edit
 
   # GET /vaccinations
   def index

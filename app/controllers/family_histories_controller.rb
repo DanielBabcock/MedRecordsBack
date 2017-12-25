@@ -1,5 +1,7 @@
 class FamilyHistoriesController < ApplicationController
+# Shouldn't this have an ( , :edit ) ?
   before_action :set_family_history, only: [:show, :update, :destroy]
+
 
   # GET /family_histories
   def index
@@ -36,6 +38,7 @@ class FamilyHistoriesController < ApplicationController
 
   # DELETE /family_histories/1
   def destroy
+    # record = family_histories.find(params[:id])
     @family_history.destroy
   end
 
