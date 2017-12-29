@@ -16,6 +16,7 @@ class PatientInfosController < ApplicationController
   # POST /patient_infos
   def create
     @patient_info = PatientInfo.new(patient_info_params)
+    @patient_info.user_id = @current_user.id
 
     if @patient_info.save
       render json: @patient_info, status: :created, location: @patient_info

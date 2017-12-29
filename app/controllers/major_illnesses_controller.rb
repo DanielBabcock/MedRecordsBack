@@ -16,6 +16,7 @@ class MajorIllnessesController < ApplicationController
   # POST /major_illnesses
   def create
     @major_illness = MajorIllness.new(major_illness_params)
+    # @major_illness.user_id = @current_user.id
 
     if @major_illness.save
       render json: @major_illness, status: :created, location: @major_illness
