@@ -38,7 +38,7 @@ class FamilyHistoriesController < ApplicationController
 
   # DELETE /family_histories/1
   def destroy
-    # record = family_histories.find(params[:id])
+    record = family_histories.find(params[:id])
     @family_history.destroy
   end
 
