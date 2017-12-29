@@ -1,3 +1,3 @@
 class MajorIllness < ApplicationRecord
-  belongs_to :patient
+  belongs_to :user#, class_name: "User", foreign_key: :user_id
 end

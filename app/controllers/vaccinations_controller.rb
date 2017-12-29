@@ -17,6 +17,8 @@ class VaccinationsController < ApplicationController
   # POST /vaccinations
   def create
     @vaccination = Vaccination.new(vaccination_params)
+    # @vaccination.user_id = @current_user.id
+
 
     if @vaccination.save
       render json: @vaccination, status: :created, location: @vaccination

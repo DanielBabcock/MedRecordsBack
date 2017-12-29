@@ -16,6 +16,8 @@ class SurgicalProceduresController < ApplicationController
   # POST /surgical_procedures
   def create
     @surgical_procedure = SurgicalProcedure.new(surgical_procedure_params)
+    # @surgical_procedure.user_id = @current_user.id
+
 
     if @surgical_procedure.save
       render json: @surgical_procedure, status: :created, location: @surgical_procedure
