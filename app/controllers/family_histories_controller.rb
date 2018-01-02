@@ -17,8 +17,8 @@ class FamilyHistoriesController < ApplicationController
 
   # POST /family_histories
   def create
-    @family_history = FamilyHistory.new(family_history_params)
-    @family_history.user_id = @current_user.id
+    # @family_history = FamilyHistory.new(family_history_params)
+    # @family_history.user_id = @current_user.id
 
     if @family_history.save
       render json: @family_history, status: :created, location: @family_history
@@ -29,6 +29,10 @@ class FamilyHistoriesController < ApplicationController
 
   # PATCH/PUT /family_histories/1
   def update
+    # @family_history = FamilyHistory.new(family_history_params)
+    # @family_history.user_id = @current_user.id
+    @family_history= family_history.find(params[:id])
+
     if @family_history.update(family_history_params)
       render json: @family_history
     else
@@ -38,6 +42,9 @@ class FamilyHistoriesController < ApplicationController
 
   # DELETE /family_histories/1
   def destroy
+    # @family_history = FamilyHistory.new(family_history_params)
+    # @family_history.user_id = @current_user.id
+
     record = family_histories.find(params[:id])
     @family_history.destroy
   end
