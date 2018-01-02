@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171211170125) do
+ActiveRecord::Schema.define(version: 20180102190333) do
 
   create_table "family_histories", force: :cascade do |t|
     t.integer "user_id"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20171211170125) do
   end
 
   create_table "major_illnesses", force: :cascade do |t|
-    t.integer "patient_id"
     t.string "illness_name"
     t.datetime "illness_start_date"
     t.datetime "illness_end_date"
@@ -64,11 +63,10 @@ ActiveRecord::Schema.define(version: 20171211170125) do
     t.string "treatment_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["patient_id"], name: "index_major_illnesses_on_patient_id"
+    t.integer "user_id"
   end
 
   create_table "medications", force: :cascade do |t|
-    t.integer "patient_id"
     t.string "medication_name"
     t.boolean "current_use"
     t.string "mediation_purpose"
@@ -80,7 +78,7 @@ ActiveRecord::Schema.define(version: 20171211170125) do
     t.string "care_giver_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["patient_id"], name: "index_medications_on_patient_id"
+    t.integer "user_id"
   end
 
   create_table "patient_infos", force: :cascade do |t|
@@ -105,7 +103,6 @@ ActiveRecord::Schema.define(version: 20171211170125) do
   end
 
   create_table "surgical_procedures", force: :cascade do |t|
-    t.integer "patient_id"
     t.string "procedure_name"
     t.string "care_giver_name"
     t.string "care_giver_title"
@@ -121,7 +118,7 @@ ActiveRecord::Schema.define(version: 20171211170125) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["patient_id"], name: "index_surgical_procedures_on_patient_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -133,13 +130,12 @@ ActiveRecord::Schema.define(version: 20171211170125) do
   end
 
   create_table "vaccinations", force: :cascade do |t|
-    t.integer "patient_id"
     t.string "vaccine_name"
     t.date "vaccination_date"
     t.date "vaccine_expiration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["patient_id"], name: "index_vaccinations_on_patient_id"
+    t.integer "user_id"
   end
 
 end
