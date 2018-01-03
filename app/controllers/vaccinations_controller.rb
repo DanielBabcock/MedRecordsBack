@@ -26,7 +26,7 @@ class VaccinationsController < ApplicationController
       render json: @vaccination.errors, status: :unprocessable_entity
     end
   end
-
+# 
   # PATCH/PUT /vaccinations/1
   def update
     @vaccination.user_id = @current_user.id
