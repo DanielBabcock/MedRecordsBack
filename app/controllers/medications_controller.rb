@@ -17,7 +17,7 @@ class MedicationsController < ApplicationController
   # POST /medications
   def create
     @medication = Medication.new(medication_params)
-    # @medication.user_id = @current_user.id
+    @medication.user_id = @current_user.id
 
     if @medication.save
       render json: @medication, status: :created, location: @medication
