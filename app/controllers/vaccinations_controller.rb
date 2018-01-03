@@ -17,7 +17,7 @@ class VaccinationsController < ApplicationController
   # POST /vaccinations
   def create
     @vaccination = Vaccination.new(vaccination_params)
-    # @vaccination.user_id = @current_user.id
+    @vaccination.user_id = @current_user.id
 
 
     if @vaccination.save
@@ -29,6 +29,9 @@ class VaccinationsController < ApplicationController
 
   # PATCH/PUT /vaccinations/1
   def update
+    @vaccination.user_id = @current_user.id
+    @vaccination= vaccination.find(params[:id])
+
     if @vaccination.update(vaccination_params)
       render json: @vaccination
     else
@@ -38,6 +41,7 @@ class VaccinationsController < ApplicationController
 
   # DELETE /vaccinations/1
   def destroy
+    @vaccination.user_id = @current_user.id
     @vaccination.destroy
   end
 
@@ -49,6 +53,6 @@ class VaccinationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def vaccination_params
-      params.require(:vaccination).permit(:patient_id, :vaccine_name, :vaccination_date, :vaccine_expiration)
+      params.require(:vaccination).permit(:user_id, :vaccine_name, :vaccination_date, :vaccine_expiration)
     end
 end
