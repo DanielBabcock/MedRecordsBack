@@ -29,8 +29,8 @@ class VaccinationsController < ApplicationController
 # 
   # PATCH/PUT /vaccinations/1
   def update
-    @vaccination.user_id = @current_user.id
-    @vaccination= vaccination.find(params[:id])
+    # @vaccination.user_id = @current_user.id
+    # @vaccination= vaccination.find(params[:id])
 
     if @vaccination.update(vaccination_params)
       render json: @vaccination

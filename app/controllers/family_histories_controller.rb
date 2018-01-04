@@ -29,9 +29,8 @@ class FamilyHistoriesController < ApplicationController
 
   # PATCH/PUT /family_histories/1
   def update
-    @family_history = FamilyHistory.new(family_history_params)
-    @family_history.user_id = @current_user.id
-    # @family_history= @family_history.find(params[:id])
+    # @family_history = FamilyHistory.new(family_history_params)
+    # @family_history.user_id = @current_user.id
 
     if @family_history.update(family_history_params)
       render json: @family_history
