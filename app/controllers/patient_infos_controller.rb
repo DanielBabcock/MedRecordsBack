@@ -36,6 +36,7 @@ class PatientInfosController < ApplicationController
 
   # DELETE /patient_infos/1
   def destroy
+    
     @patient_info.destroy
   end
 
@@ -47,6 +48,7 @@ class PatientInfosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def patient_info_params
-      params.require(:patient_info).permit(:name_first, :name_last, :patient_sex, :race, :height, :height_in_inches, :weight, :weight_in_pounds, :date_birth, :address, :phone_number, :emergency_contact_name_first, :emergency_contact_name_last, :emergency_contact_phone_number, :emergency_contact_address, :eligible_blood_donor)
+      params.require(:patient_info).permit(
+        :user_id, :name_first, :name_last, :patient_sex, :race, :height, :height_in_inches, :weight, :weight_in_pounds, :date_birth, :address, :phone_number, :emergency_contact_name_first, :emergency_contact_name_last, :emergency_contact_phone_number, :emergency_contact_address, :eligible_blood_donor)
     end
 end
