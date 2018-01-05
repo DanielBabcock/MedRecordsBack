@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180102190333) do
+ActiveRecord::Schema.define(version: 20180105200634) do
 
   create_table "family_histories", force: :cascade do |t|
     t.integer "user_id"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 20180102190333) do
     t.boolean "eligible_blood_donor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "surgical_procedures", force: :cascade do |t|
