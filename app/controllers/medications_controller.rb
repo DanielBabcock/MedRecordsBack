@@ -37,6 +37,7 @@ class MedicationsController < ApplicationController
 
   # DELETE /medications/1
   def destroy
+    @medication.user_id = @current_user.id
     @medication.destroy
   end
 
@@ -48,6 +49,7 @@ class MedicationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def medication_params
-      params.require(:medication).permit(:patient_id, :medication_name, :current_use, :mediation_purpose, :medication_dose_amount, :medication_dose_frequency, :medication_start_date, :medication_end_date, :care_giver, :care_giver_title)
+      params.require(:medication).permit( 
+        :user_id, :medication_name, :current_use, :mediation_purpose,:medication_dose_amount, :medication_dose_frequency, :medication_start_date, :medication_end_date, :care_giver, :care_giver_title)
     end
 end
